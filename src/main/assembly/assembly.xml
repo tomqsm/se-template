@@ -25,6 +25,11 @@
             <outputDirectory>/</outputDirectory>
             <filtered>true</filtered>
         </file>
+        <file>
+            <source>config/configuration.xml</source>
+            <outputDirectory>config</outputDirectory>
+            <filtered>false</filtered>
+        </file>
     </files>
     <dependencySets>
         <dependencySet>

@@ -1,5 +1,6 @@
 package com.tomasz.design.framuga;
 
+import com.tomasz.design.framuga.config.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,5 +14,6 @@ public class App {
     
     public static void main(String[] args) {
         LOGGER.info("Logging hello world.");
+        LOGGER.info("Configuration xml color: {}", Configuration.COLOR.toString());
     }
 }
