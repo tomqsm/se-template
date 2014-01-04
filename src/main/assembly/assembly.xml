@@ -28,7 +28,7 @@
         <file>
             <source>config/configuration.xml</source>
             <outputDirectory>config</outputDirectory>
-            <filtered>false</filtered>
+            <filtered>true</filtered>
         </file>
     </files>
     <dependencySets>

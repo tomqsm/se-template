@@ -2,5 +2,6 @@
 <config>
     <properties>
         <color>blue</color>
+        <logging>${log.level}</logging>
     </properties>
 </config>

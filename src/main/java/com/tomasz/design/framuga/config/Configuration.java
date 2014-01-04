@@ -13,7 +13,7 @@ public enum Configuration {
                 @Override
                 public String toString() {
                     HierarchicalConfiguration hc = XML_CONFIG.configurationsAt("properties").get(FIRST);
-                    return hc.getString("color");
+                    return hc.getString(super.name().toLowerCase());
                 }
             };
 
