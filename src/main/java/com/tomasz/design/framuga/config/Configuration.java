@@ -1,5 +1,6 @@
 package com.tomasz.design.framuga.config;
 
+import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
 
@@ -15,6 +16,11 @@ public enum Configuration {
                     HierarchicalConfiguration hc = XML_CONFIG.configurationsAt("properties").get(FIRST);
                     return hc.getString(super.name().toLowerCase());
                 }
+                @Override
+                public void setValue(final String value) throws ConfigurationException{
+                    XML_CONFIG.setProperty("properties/color", value);
+                    XML_CONFIG.save();
+                }
             };
 
     static {
@@ -24,4 +30,5 @@ public enum Configuration {
     }
     private static XMLConfiguration XML_CONFIG;
     private static final int FIRST = 0;
+    public abstract void setValue(final String value) throws ConfigurationException;
 }
