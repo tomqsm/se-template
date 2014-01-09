@@ -4,16 +4,20 @@ package com.tomasz.design.framuga.guava.eventbus;
  *
  * @author kusmierc
  */
-public class EventListener implements Listener<EventModel>{
-    
-    private String receivedMessage;
+public class EventListener implements Listener {
 
-    public String getReceivedMessage() {
-        return receivedMessage;
+    private Class eventSource;
+
+    /**
+     *
+     * @param event
+     */
+    @Override
+    public void listen(Event event) {
+        eventSource = event.getSourceClass();
     }
 
-    @Override
-    public void listen(EventModel event) {
-        System.out.println("event model: " + event.getName());
+    public Class getEventSource() {
+        return eventSource;
     }
 }

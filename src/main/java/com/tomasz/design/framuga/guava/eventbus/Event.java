@@ -4,12 +4,9 @@ package com.tomasz.design.framuga.guava.eventbus;
  *
  * @author kusmierc
  */
-public abstract class Event<T> {
+public class Event {
 
     private Class sourceClass;
-
-    public Event() {
-    }
 
     public Class getSourceClass() {
         return sourceClass;
@@ -18,5 +15,5 @@ public abstract class Event<T> {
     public void setSourceClass(Class sourceClass) {
         this.sourceClass = sourceClass;
     }
-
+    
 }
