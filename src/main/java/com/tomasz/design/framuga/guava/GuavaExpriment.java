@@ -22,37 +22,7 @@ public class GuavaExpriment {
     public GuavaExpriment() {
 
     }
-    public void pushButtonAssync() {
-        ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(4));
-        ListenableFuture<Integer> explosion = service.submit(new Callable<Integer>() {
-            @Override
-            public Integer call() {
-                return pushButton();
-            }
-        });
-        Futures.addCallback(explosion, new FutureCallback<Integer>() {
-            // we want this handler to run immediately after we push the big red button!
-            @Override
-            public void onSuccess(Integer explosion) {
-                System.err.println("explosion = " + explosion);
-            }
 
-            @Override
-            public void onFailure(Throwable thrown) {
-                System.err.println("thrown = " + thrown);
-            }
-        });
-        service.shutdown();
-    }
-
-    private Integer pushButton() {
-        for (Integer i = 0; i < 2000000000; i++) {
-            if (i % 1000000000 == 0) {
-                System.out.println(true);
-            }
-        }
-        return 1234;
-    }
     public void scan() {
         Scanner in = new Scanner(System.in);
         final int nThreads = in.nextInt();

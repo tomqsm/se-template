@@ -1,6 +1,7 @@
 package com.tomasz.design.framuga;
 
 import com.tomasz.design.framuga.config.Configuration;
+import com.tomasz.design.framuga.guava.ExecutorCallback;
 import com.tomasz.design.framuga.guava.GuavaExpriment;
 import org.apache.commons.configuration.ConfigurationException;
 import org.slf4j.Logger;
@@ -19,8 +20,9 @@ public class App {
         LOGGER.info("Configuration xml color: {}", Configuration.COLOR.toString());
         Configuration.COLOR.setValue("red");
         LOGGER.info("Configuration xml color: {}", Configuration.COLOR.toString());
+        ExecutorCallback ec = new ExecutorCallback();
         GuavaExpriment ge = new GuavaExpriment();
-        ge.pushButtonAssync();
+        ec.executorWithListener();
         ge.scan();
         System.out.println("Main Finished");
     }
