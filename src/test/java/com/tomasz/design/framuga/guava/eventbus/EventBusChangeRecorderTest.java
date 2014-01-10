@@ -21,11 +21,31 @@ public class EventBusChangeRecorderTest {
 
     @Test
     public void eventSender() {
-        Event event = new Event();
+        Event event = new Event(new Integer(12));
         event.setSourceClass(getClass());
         EventListener eventListener = new EventListener();
         EventRegistry.LISTENERS.add(eventListener);
         EventRegistry.LISTENERS.post(event);
         assertEquals(getClass(), eventListener.getEventSource());
+    }
+    @Test
+    public void eventInAnonymousWay(){
+        Event event = new Event(new Integer(13));
+        event.setSourceClass(getClass());
+        Listener l = new Listener() {
+
+            @Override
+            public void listen(Event event) {
+                System.out.println("time: " + event.getTime());
+                System.out.println("data: " + event.getSource());
+            }
+        };
+        EventRegistry.LISTENERS.add(l);
+        EventRegistry.LISTENERS.post(event);
+    }
+    
+    @Test
+    public void mimickedMainTest(){
+        MainMimicked.main();
     }
 }
