@@ -3,6 +3,6 @@
 <properties>
         <color>blue</color>
         <logging>${log.level}</logging>
-        <time>258080405462973</time>
+        <time>284663044757219</time>
     </properties>
 </config>

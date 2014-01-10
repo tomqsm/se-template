@@ -1,8 +1,8 @@
 package com.tomasz.design.framuga;
 
 import com.tomasz.design.framuga.config.Configuration;
-import com.tomasz.design.framuga.guava.ExecutorCallback;
-import com.tomasz.design.framuga.guava.GuavaExpriment;
+import com.tomasz.design.framuga.guava.executor.ExecutorCallback;
+import com.tomasz.design.framuga.guava.executor.GuavaExpriment;
 import org.apache.commons.configuration.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

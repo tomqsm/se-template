@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
  * @author kusmierc
  */
 public class EventListener implements Listener {
+
     private static Logger LOG = LoggerFactory.getLogger(EventListener.class);
     private Class eventSource;
 
@@ -17,8 +18,10 @@ public class EventListener implements Listener {
      */
     @Override
     public void listen(Event event) {
-        EventProducer producer = (EventProducer) event.getSource();
-        LOG.info("received event with data: {}", producer.getProducerData());
+        if (event.getSource() instanceof EventProducer) {
+            EventProducer producer = (EventProducer) event.getSource();
+            LOG.info("received event with data: {}", producer.getProducerData());
+        }
         eventSource = event.getSourceClass();
     }
 

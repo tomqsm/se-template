@@ -1,4 +1,4 @@
-package com.tomasz.design.framuga.guava;
+package com.tomasz.design.framuga.guava.executor;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

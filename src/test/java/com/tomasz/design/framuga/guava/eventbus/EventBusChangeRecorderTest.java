@@ -21,7 +21,7 @@ public class EventBusChangeRecorderTest {
 
     @Test
     public void eventSender() {
-        Event event = new Event(new Integer(12));
+        Event event = new Event(this);
         event.setSourceClass(getClass());
         EventListener eventListener = new EventListener();
         EventRegistry.LISTENERS.add(eventListener);

@@ -1,5 +1,6 @@
-package com.tomasz.design.framuga.guava;
+package com.tomasz.design.framuga.guava.executor;
 
+import com.tomasz.design.framuga.guava.executor.GuavaExpriment;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Files;
