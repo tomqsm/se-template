@@ -69,12 +69,20 @@
             <version>1.3</version>
         </dependency>
         <!--configuration end-->
+        
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>15.0</version>
-            <!--<classifier>cdi1.0</classifier>-->
         </dependency>  
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.9-RC1</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!--testing-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -82,11 +90,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.reflections</groupId>
-            <artifactId>reflections</artifactId>
-            <version>0.9.9-RC1</version>
-            <type>jar</type>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert</artifactId>
+            <version>1.4</version>
+            <scope>test</scope>
         </dependency>
+        
     </dependencies>
     
     <build>            

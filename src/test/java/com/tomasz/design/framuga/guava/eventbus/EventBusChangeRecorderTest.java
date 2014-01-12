@@ -4,6 +4,7 @@ import org.junit.After;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  *
@@ -36,8 +37,7 @@ public class EventBusChangeRecorderTest {
 
             @Override
             public void listen(Event event) {
-                System.out.println("time: " + event.getTime());
-                System.out.println("data: " + event.getSource());
+                assertThat(event).isNotNull();
             }
         };
         EventRegistry.LISTENERS.add(l);
