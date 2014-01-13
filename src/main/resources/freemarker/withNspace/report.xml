@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<report xmlns="http://com.tomtom.pc.sonar.probe/schemas">
+    <stats>
+        <week number="24">
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="25">
+            <blockers>0</blockers>
+            <critical>10</critical>
+        </week>
+        <week number="26">
+            <blockers>0</blockers>
+            <critical>9</critical>
+        </week>
+        <week number="27">
+            <blockers>6</blockers>
+            <critical>16</critical>
+        </week>
+        <week number="28">
+            <blockers>6</blockers>
+            <critical>15</critical>
+        </week>
+        <week number="29">
+            <blockers>6</blockers>
+            <critical>15</critical>
+        </week>
+        <week number="30">
+            <blockers>6</blockers>
+            <critical>15</critical>
+        </week>
+        <week number="31">
+            <blockers>6</blockers>
+            <critical>15</critical>
+        </week>
+        <week number="32">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="33">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="34">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="35">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="36">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="37">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="38">
+            <blockers>0</blockers>
+            <critical>13</critical>
+        </week>
+        <week number="40">
+            <blockers>0</blockers>
+            <critical>14</critical>
+        </week>
+    </stats>
+    <project name="com.tomtom.pc:mapupdate-database">
+        <testing>
+            <unit bottom="60" top="80"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="24">
+            <unit>74.4</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>1</critical>
+        </week>
+        <week number="25">
+            <unit>74.4</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>1</critical>
+        </week>
+        <week number="26">
+            <unit>74.4</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>74.4</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>74.5</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>74.5</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>83.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.transaction:transaction-exporter-ws">
+        <testing>
+            <unit bottom="50" top="70"></unit>
+            <overall bottom="70" top="90"></overall>
+        </testing>
+        <week number="24">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="25">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="26">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>65.2</unit>
+            <overall>88.5</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:trans-scheduler">
+        <testing>
+            <unit bottom="10" top="50"></unit>
+            <overall bottom="50" top="70"></overall>
+        </testing>
+        <week number="24">
+            <unit>11.1</unit>
+            <overall>64.0</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="25">
+            <unit>11.1</unit>
+            <overall>64.0</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="26">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="27">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="28">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="29">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="30">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="31">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="32">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="33">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="34">
+            <unit>11.1</unit>
+            <overall>64.4</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="35">
+            <unit>11.1</unit>
+            <overall>64.2</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="36">
+            <unit>11.1</unit>
+            <overall>64.2</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="37">
+            <unit>11.1</unit>
+            <overall>64.2</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="38">
+            <unit>11.1</unit>
+            <overall>64.2</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+        <week number="40">
+            <unit>11.1</unit>
+            <overall>64.2</overall>
+            <blockers>0</blockers>
+            <critical>8</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:mapupdate-validator">
+        <testing>
+            <unit bottom="50" top="70"></unit>
+            <overall bottom="70" top="85"></overall>
+        </testing>
+        <week number="24">
+            <unit>55.5</unit>
+            <overall>83.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="25">
+            <unit>55.5</unit>
+            <overall>83.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="26">
+            <unit>55.0</unit>
+            <overall>83.1</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>55.0</unit>
+            <overall>83.1</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>49.1</unit>
+            <overall>81.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>49.1</unit>
+            <overall>81.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>52.3</unit>
+            <overall>83.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>52.3</unit>
+            <overall>83.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>50.9</unit>
+            <overall>82.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>51.7</unit>
+            <overall>82.2</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:filtering-service">
+        <testing>
+            <unit bottom="30" top="50"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="26">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="27">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="28">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="29">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="30">
+            <unit>28.3</unit>
+            <overall>28.3</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="31">
+            <unit>28.3</unit>
+            <overall>28.3</overall>
+            <blockers>5</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="32">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="33">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="34">
+            <unit>27.8</unit>
+            <overall>27.8</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="35">
+            <unit>27.7</unit>
+            <overall>27.7</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="36">
+            <unit>27.7</unit>
+            <overall>27.7</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="37">
+            <unit>27.7</unit>
+            <overall>27.7</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="38">
+            <unit>27.7</unit>
+            <overall>27.7</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+        <week number="40">
+            <unit>27.7</unit>
+            <overall>27.7</overall>
+            <blockers>0</blockers>
+            <critical>5</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:openlr-matcher-client">
+        <testing>
+            <unit bottom="0" top="0"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="26">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="27">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="28">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="29">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="30">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="31">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>1</blockers>
+            <critical>2</critical>
+        </week>
+        <week number="32">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:openlr-matching-shared-resource">
+        <testing>
+            <unit bottom="0" top="0"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="26">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>0.0</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.cpu:incrementalupdateloader">
+        <testing>
+            <unit bottom="50" top="60"></unit>
+            <overall bottom="70" top="85"></overall>
+        </testing>
+        <week number="26">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>57.4</unit>
+            <overall>81.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:openlr-matcher">
+        <testing>
+            <unit bottom="50" top="60"></unit>
+            <overall bottom="60" top="75"></overall>
+        </testing>
+        <week number="26">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>57.9</unit>
+            <overall>67.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.edelivery:statistics">
+        <testing>
+            <unit bottom="30" top="80"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="26">
+            <unit>16.8</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="27">
+            <unit>16.8</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="28">
+            <unit>16.8</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="29">
+            <unit>16.8</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="30">
+            <unit>13.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="31">
+            <unit>13.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="32">
+            <unit>13.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="33">
+            <unit>17.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="34">
+            <unit>17.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="35">
+            <unit>17.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="36">
+            <unit>17.2</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>33.7</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>33.7</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>25.1</unit>
+            <overall>-1.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+    </project>
+    <project name="com.tomtom.pc:mapupdate2shape">
+        <testing>
+            <unit bottom="60" top="80"></unit>
+            <overall bottom="0" top="0"></overall>
+        </testing>
+        <week number="36">
+            <unit>70.0</unit>
+            <overall>70.0</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="37">
+            <unit>69.3</unit>
+            <overall>69.3</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="38">
+            <unit>67.4</unit>
+            <overall>67.4</overall>
+            <blockers>0</blockers>
+            <critical>0</critical>
+        </week>
+        <week number="40">
+            <unit>22.0</unit>
+            <overall>22.0</overall>
+            <blockers>0</blockers>
+            <critical>1</critical>
+        </week>
+    </project>
+</report>
