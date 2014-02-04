@@ -11,6 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
@@ -29,17 +30,12 @@ public class GuavaExpriment {
         final int n = in.nextInt();
 
         System.out.println("Using " + nThreads + " threads");
-        ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(nThreads));
+        final ExecutorService pool = Executors.newFixedThreadPool(nThreads);
+        ListeningExecutorService service = MoreExecutors.listeningDecorator(pool);
 
         try {
             try {
                 workersDo(service, n);
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
-            }
-
-            try {
-                workersCancel(service, n);
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
@@ -52,18 +48,18 @@ public class GuavaExpriment {
     public void workersDo(ListeningExecutorService service, int n) throws InterruptedException, ExecutionException {
         // using the Guava's utility method allAsList will return all the results in a future list
         // enormously simplifying the code:
-        ListenableFuture<List<Integer>> ret = Futures.successfulAsList(addSomeTasks(service, n));
+        ListenableFuture<List<Integer>> results = Futures.successfulAsList(loadTasks(service, n));
         // the call to get() is now the blocking piece of code
-        System.out.println("Values returned from computations: " + ret.get());
+        System.out.println("Values returned from computations: " + results.get());
         System.out.println("All done.");
     }
 
     public void workersCancel(ListeningExecutorService service, int n) throws InterruptedException, ExecutionException {
-        List<ListenableFuture<Integer>> tasks = addSomeTasks(service, n);
-        ListenableFuture<List<Integer>> ret = Futures.allAsList(tasks);
-        Thread.sleep(1000);
+        List<ListenableFuture<Integer>> tasks = loadTasks(service, n);
+        ListenableFuture<List<Integer>> futures = Futures.allAsList(tasks);
+        Thread.sleep(500);
         System.out.println("Actually nevermind!");
-        ret.cancel(true);
+        futures.cancel(true);
         // let's see how many tasks were actually cancelled by asking the original futures:
         List<Integer> completed = new ArrayList<>();
         for (ListenableFuture<Integer> f : tasks) {
@@ -75,12 +71,12 @@ public class GuavaExpriment {
         System.out.println("All done.");
     }
 
-    private List<ListenableFuture<Integer>> addSomeTasks(ListeningExecutorService service, int howMany) {
+    private List<ListenableFuture<Integer>> loadTasks(ListeningExecutorService service, int howMany) {
         System.out.println("Enqueuing " + howMany + " tasks...");
-        List<ListenableFuture<Integer>> ret = new ArrayList<>();
+        List<ListenableFuture<Integer>> futures = new ArrayList<>();
         for (int i = 1; i <= howMany; i++) {
             final int n = i;
-            ret.add(service.submit(new Callable<Integer>() {
+            futures.add(service.submit(new Callable<Integer>() {
                 @Override
                 public Integer call() {
                     try {
@@ -89,20 +85,6 @@ public class GuavaExpriment {
                             Thread.sleep(200 + rnd.nextInt(200));
                         } catch (InterruptedException e) {
                             System.out.println("Task " + n + " interrupted while doing very important work");
-                            return null;
-                        }
-                        try {
-                            System.out.println("Task " + n + ": Doing more important work...");
-                            Thread.sleep(200 + rnd.nextInt(200));
-                        } catch (InterruptedException e) {
-                            System.out.println("Task " + n + " interrupted while doing important work");
-                            return null;
-                        }
-                        try {
-                            System.out.println("Task " + n + ": Doing slightly less important work...");
-                            Thread.sleep(200 + rnd.nextInt(200));
-                        } catch (InterruptedException e) {
-                            System.out.println("Task " + n + " interrupted while doing slightly less important work");
                             return null;
                         }
                         int ret = rnd.nextInt();
@@ -114,7 +96,7 @@ public class GuavaExpriment {
                 }
             }));
         }
-        return ret;
+        return futures;
     }
 
     private final static Random rnd = new Random();

@@ -38,7 +38,7 @@ public class ConfigProviderTest {
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
-    @Test
+//    @Test
     public void testInitialiseXMLConfiguration() {
         final int first = 0;
         ConfigProvider configProvider = new ConfigProvider();

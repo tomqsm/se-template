@@ -1,5 +1,6 @@
 package com.tomasz.design.framuga.annotation;
 
+import com.google.common.util.concurrent.ListeningExecutorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +16,9 @@ public class Subscriber1 extends SubscriberAbstract<Visitorable> implements Subs
 
     public Subscriber1(final Visitorable visitor) {
         super(visitor);
+    }
+    public Subscriber1(final Visitorable visitor, final ListeningExecutorService service) {
+        super(visitor, service);
     }
 
     @Override
