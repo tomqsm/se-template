@@ -22,6 +22,7 @@ public class Subscriber2 extends SubscriberAbstract<Visitorable> implements Subs
         LOG.trace("running | " + value.getName());
         UpdateModel um = new UpdateModel();
         signalVisitor(um);
+        LOG.trace("finished | " + value.getName());
     }
 
 }
