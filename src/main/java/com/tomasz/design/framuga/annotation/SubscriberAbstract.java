@@ -29,7 +29,8 @@ public abstract class SubscriberAbstract<T extends Visitorable> {
         this.visitor = monitor;
     }
     
-    public void signalMonitor(UpdateModel model) {
+    public void signalVisitor(UpdateModel model) {
+        LOG.trace("running");
         visitor.changeDataModel(model);
     }
 

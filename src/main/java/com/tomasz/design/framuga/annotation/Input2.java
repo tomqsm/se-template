@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class Input2 {
 
     private static final Logger LOG = LoggerFactory.getLogger(Input2.class);
-    private final String name = "model1";
+    private final String name = "input2";
 
     public String getName() {
         return name;

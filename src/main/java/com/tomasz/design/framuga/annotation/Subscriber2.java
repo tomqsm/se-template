@@ -18,10 +18,10 @@ public class Subscriber2 extends SubscriberAbstract<Visitorable> implements Subs
     }
 
     @Override
-    public void execute(Input2 value) {
-        LOG.info("running");
+    public void execute(final Input2 value) {
+        LOG.trace("running | " + value.getName());
         UpdateModel um = new UpdateModel();
-        signalMonitor(um);
+        signalVisitor(um);
     }
 
 }

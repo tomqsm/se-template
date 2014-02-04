@@ -61,21 +61,22 @@ public class AnnotationRegistratorTest {
      * just exception runs. 15340 no class cast - 26695 with class cast in 
      * microseconds.
      */
-    @Test @Ignore
+    @Test
     public void simpleTimingtest() {
-        Input1 input1 = new Input1();
-        Visitorable visitor = new Visitor();
+        final Input1 input1 = new Input1();
+        final Input2 input2 = new Input2();
+        final Visitorable visitor = new Visitor();
         final Subscribable subscribable1 = new Subscriber1(visitor);
-        Subscribable subscribable2 = new Subscriber2(visitor);
-        Stopwatch stopwatch = Stopwatch.createStarted();
-        for (int i = 0; i < 1000; i++) {
+        final Subscribable subscribable2 = new Subscriber2(visitor);
+        final Stopwatch stopwatch = Stopwatch.createStarted();
+        for (int i = 0; i < 1; i++) {
             try {
-                subscribable2.execute(input1);
+                subscribable1.execute(input1);
             } catch (ClassCastException e) {
-                System.out.println("ee");
+                System.out.println("not matched input type");
             }
         }
-        final long elapsed = stopwatch.elapsed(TimeUnit.MICROSECONDS);
+        final long elapsed = stopwatch.elapsed(TimeUnit.MILLISECONDS);
         System.err.println("elapsed = " + elapsed);
         stopwatch.stop();
     }

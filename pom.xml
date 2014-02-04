@@ -31,7 +31,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <log.level>info</log.level>
+                <log.level>trace</log.level>
             </properties>
         </profile>
         <profile>
@@ -102,10 +102,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.commons</groupId>
+            <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
     

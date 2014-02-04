@@ -3,7 +3,6 @@ package com.tomasz.design.framuga.annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * This class identifies type of update to be undertaken.
  *
@@ -13,16 +12,16 @@ import org.slf4j.LoggerFactory;
 public class Subscriber1 extends SubscriberAbstract<Visitorable> implements Subscribable<Input1> {
 
     private static final Logger LOG = LoggerFactory.getLogger(Subscriber1.class);
+
     public Subscriber1(final Visitorable visitor) {
         super(visitor);
     }
 
     @Override
-    public void execute(Input1 value) {
-//        LOG.info("running");
+    public void execute(final Input1 value) {
+        LOG.trace("running | " + value.getName());
         UpdateModel um = new UpdateModel();
-        signalMonitor(um);
+        signalVisitor(um);
+        LOG.trace("finished | " + value.getName());
     }
-
-    
 }

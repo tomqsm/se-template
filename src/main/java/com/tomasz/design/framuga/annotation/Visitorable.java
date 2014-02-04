@@ -9,6 +9,7 @@ public interface Visitorable {
 
     /**
      * Runs on a field update in feature.
+     * @param updateModel
      */
     void changeDataModel(UpdateModel updateModel);
 }

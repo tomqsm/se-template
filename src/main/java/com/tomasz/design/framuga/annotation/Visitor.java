@@ -11,8 +11,7 @@ public class Visitor implements Visitorable{
     private static final Logger LOG = LoggerFactory.getLogger(Visitor.class);
     @Override
     public void changeDataModel(UpdateModel updateModel) {
-//        LOG.info("Visistor ready do operate on model");
-        System.out.println("vv");
+        LOG.trace("changing | " + updateModel);
+        updateModel.setName(updateModel.getName() + " changed ");
     }
-    
 }

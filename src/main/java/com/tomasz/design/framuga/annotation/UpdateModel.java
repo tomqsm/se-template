@@ -12,10 +12,19 @@ import org.slf4j.LoggerFactory;
 public class UpdateModel {
 
     private static final Logger LOG = LoggerFactory.getLogger(UpdateModel.class);
-    private final String name = "my mode";
+    private String name = "my model";
 
     public String getName() {
         return name;
+    }
+    
+    public void setName(final String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "model: " + name;
     }
     
 }
