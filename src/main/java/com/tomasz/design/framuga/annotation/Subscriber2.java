@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * @author kusmierc
  */
 @Subscriber
-public class Subscriber2 extends SubscriberAbstract<Visitorable> implements Subscribable<Input2> {
+public class Subscriber2 extends SubscriberAsyncAbstract<Visitorable> implements Subscribable<Input2> {
 
     private static final Logger LOG = LoggerFactory.getLogger(Subscriber2.class);
 

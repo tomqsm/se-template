@@ -49,18 +49,18 @@ public class XmlUtilsTest {
 
     @Test
     public void unmarshalsConfig() throws Exception {
-        Shiporder order = XmlUtils.unmarshal(Shiporder.class, FileUtils.openInputStream(SHIPORDER_XML));
+        Shiporder order = XmlUtils.unmarshall(Shiporder.class, FileUtils.openInputStream(SHIPORDER_XML));
         assertNotNull(order);
         assertThat(order.getItem()).hasSize(2);
     }
 
     @Test
     public void marshaledCorrectly() throws IOException, JAXBException {
-        Shiporder order = XmlUtils.unmarshal(Shiporder.class, FileUtils.openInputStream(SHIPORDER_XML));
+        Shiporder order = XmlUtils.unmarshall(Shiporder.class, FileUtils.openInputStream(SHIPORDER_XML));
         assertNotNull(order);
         assertThat(order.getItem()).hasSize(2);
-        XmlUtils.marshal(order, SHIPORDER_MARSHALLED_XML);
-        order = XmlUtils.unmarshal(Shiporder.class, FileUtils.openInputStream(SHIPORDER_MARSHALLED_XML));
+        XmlUtils.marshall(order, SHIPORDER_MARSHALLED_XML);
+        order = XmlUtils.unmarshall(Shiporder.class, FileUtils.openInputStream(SHIPORDER_MARSHALLED_XML));
         assertNotNull(order);
         assertThat(order.getItem()).hasSize(2);
     }

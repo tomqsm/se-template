@@ -48,5 +48,6 @@ public class App {
 //            }
         }
         service.shutdown();
+        LOG.trace("main finished");
     }
 }

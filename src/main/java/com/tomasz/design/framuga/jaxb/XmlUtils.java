@@ -24,7 +24,7 @@ class XmlUtils {
     private XmlUtils() {
     }
 
-    static <T> T unmarshal(Class<T> docClass, InputStream inputStream) throws JAXBException {
+    static <T> T unmarshall(Class<T> docClass, InputStream inputStream) throws JAXBException {
         String packageName = docClass.getPackage().getName();
         JAXBContext jc = JAXBContext.newInstance(packageName);
         Unmarshaller u = jc.createUnmarshaller();
@@ -32,7 +32,7 @@ class XmlUtils {
         return (T) doc;
     }
 
-    static void marshal(Object jaxbe, File dest) throws IOException, JAXBException {
+    static void marshall(Object jaxbe, File dest) throws IOException, JAXBException {
         JAXBContext jc = JAXBContext.newInstance(jaxbe.getClass());
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
