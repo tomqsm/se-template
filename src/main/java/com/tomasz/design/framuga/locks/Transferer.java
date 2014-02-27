@@ -5,10 +5,10 @@ package com.tomasz.design.framuga.locks;
  */
 public class Transferer implements Runnable {
 
-    private Bank bank;
-    private int fromAccount;
-    private double maxAmount;
-    private static int DELAY = 10000;
+    private final Bank bank;
+    private final int fromAccount;
+    private final double maxAmount;
+    private static final int DELAY = 10000;
 
     public Transferer(Bank bank, int from, double max) {
         this.bank = bank;

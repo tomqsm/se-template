@@ -9,6 +9,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Bank {
 
     private double[] accounts;
+    /**
+     * Reentrant because a thread can repeatedly acquire a lock that it already
+     * owns, Horstmen 744.
+     */
     private ReentrantLock bankLock;
     private Condition sufficientFunds;
 
