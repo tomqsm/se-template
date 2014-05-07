@@ -1,6 +1,9 @@
 package com.tomasz.design.framuga;
 
 import org.apache.camel.CamelContext;
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.slf4j.Logger;
@@ -11,9 +14,9 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class App {
-    
+
     public static final Logger LOGGER = LoggerFactory.getLogger(App.class);
-    
+
     public static void main(String[] args) throws Exception {
         LOGGER.info("Starting application.");
         CamelContext camelContext = new DefaultCamelContext();
@@ -21,11 +24,22 @@ public class App {
 
             @Override
             public void configure() throws Exception {
-                from("file:data/inbox?noop=true").to("file:data/outbox");
+                from("file:data/inbox?noop=true").process(new Processor() {
+
+                    @Override
+                    public void process(Exchange exchange) throws Exception {
+                        Message message = exchange.getIn();
+                        String body = message.getBody(String.class);
+                        body = body + " enriched";
+                        message.setBody(body, String.class);
+                        exchange.setIn(message);
+                    }
+                })
+                        .to("file:data/outbox");
             }
         });
         camelContext.start();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         camelContext.stop();
     }
 }
