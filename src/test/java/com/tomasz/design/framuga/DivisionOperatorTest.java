@@ -9,9 +9,9 @@ import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
 
-public class OperatorTest {
+public class DivisionOperatorTest {
     
-    public OperatorTest() {
+    public DivisionOperatorTest() {
     }
     
     @BeforeClass
@@ -34,13 +34,13 @@ public class OperatorTest {
     public ExpectedException thrown = ExpectedException.none();
 
     /**
-     * Test of devide method, of class Operator.
+     * Test of devide method, of class DivisionOperator.
      */
     @Test
     public void doesntAllowDevision0() {
         thrown.expect(AppException.class);
         thrown.expectMessage("Not allowed.");
-        Operator operator = new Operator();
+        DivisionOperator operator = new DivisionOperator();
         operator.devide(2, 0);
     }
 }

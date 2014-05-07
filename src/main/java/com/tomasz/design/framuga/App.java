@@ -8,6 +8,8 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
@@ -19,6 +21,9 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         LOGGER.info("Starting application.");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+        Operatorable operatorable = ac.getBean("myOperator", DivisionOperator.class);
+        System.out.println(operatorable.devide(12, 6));
         CamelContext camelContext = new DefaultCamelContext();
         camelContext.addRoutes(new RouteBuilder() {
 
@@ -39,7 +44,6 @@ public class App {
             }
         });
         camelContext.start();
-        Thread.sleep(5000);
         camelContext.stop();
     }
 }

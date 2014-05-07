@@ -1,6 +1,6 @@
 package com.tomasz.design.framuga;
 
-public class Operator {
+public class DivisionOperator implements Operatorable{
 
     public double devide(double a, double b) {
         if(b == 0){
