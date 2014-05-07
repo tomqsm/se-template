@@ -1,10 +1,13 @@
 package com.tomasz.design.framuga;
 
+import javax.jms.ConnectionFactory;
+import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.jms.JmsComponent;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,12 +28,16 @@ public class App {
         Operatorable operatorable = ac.getBean("myOperator", DivisionOperator.class);
         System.out.println(operatorable.devide(12, 6));
         CamelContext camelContext = new DefaultCamelContext();
+        
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("vm://localhost");
+        camelContext.addComponent("jms", JmsComponent.jmsComponentAutoAcknowledge(connectionFactory));
+        
         camelContext.addRoutes(new RouteBuilder() {
 
             @Override
             public void configure() throws Exception {
                 from("file:data/inbox?noop=true")
-                        .choice().when(header("CamelFileName").endsWith(".filtered"))
+                        .choice().when(header("CamelFileName").endsWith(".xml"))
                         .process(new Processor() {
 
                     @Override
@@ -41,12 +48,20 @@ public class App {
                         message.setBody(body, String.class);
                         exchange.setIn(message);
                     }
-                })
-                        .to("file:data/outbox");
+                }).convertBodyTo(String.class)
+                        .to("jms:orders");
+                from("jms:orders").process(new Processor() {
+                    @Override
+                    public void process(Exchange exchange) throws Exception {
+                        Message message = exchange.getIn();
+                        String body = message.getBody(String.class);
+                        System.out.println(body);
+                    }
+                }).to("file:data/outbox");
             }
         });
         camelContext.start();
-        Thread.sleep(2000);
+        Thread.sleep(10000);
         camelContext.stop();
     }
 }
