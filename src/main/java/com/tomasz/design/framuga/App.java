@@ -29,13 +29,15 @@ public class App {
 
             @Override
             public void configure() throws Exception {
-                from("file:data/inbox?noop=true").process(new Processor() {
+                from("file:data/inbox?noop=true")
+                        .choice().when(header("CamelFileName").endsWith(".filtered"))
+                        .process(new Processor() {
 
                     @Override
                     public void process(Exchange exchange) throws Exception {
                         Message message = exchange.getIn();
                         String body = message.getBody(String.class);
-                        body = body + " enriched";
+                        body = body + " enriched " + message.getHeader("CamelFileName", String.class);
                         message.setBody(body, String.class);
                         exchange.setIn(message);
                     }
@@ -44,6 +46,7 @@ public class App {
             }
         });
         camelContext.start();
+        Thread.sleep(2000);
         camelContext.stop();
     }
 }
