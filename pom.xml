@@ -155,29 +155,6 @@
             </plugin>
             
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxb2-maven-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <id>report-xjc</id>
-                        <goals>
-                            <goal>xjc</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>src/main/java/</outputDirectory>
-                            <clearOutputDir>false</clearOutputDir>
-                            <schemaDirectory>src/main/resources/jaxb/schemas</schemaDirectory>
-                            <schemaFiles>shiporderSplit.xsd</schemaFiles>
-                            <packageName>com.tomasz.design.framuga.jaxb.generated</packageName> <!-- The name of your generated source package -->
-                            <staleFile>${project.build.directory}/jaxb2/schema1XjcStaleFlag</staleFile>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>

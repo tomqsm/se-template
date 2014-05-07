@@ -1,8 +1,5 @@
 package com.tomasz.design.framuga;
 
-import com.tomasz.design.framuga.config.Configuration;
-import com.tomasz.design.framuga.guava.executor.ExecutorCallback;
-import com.tomasz.design.framuga.guava.executor.GuavaExpriment;
 import org.apache.commons.configuration.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,13 +14,6 @@ public class App {
     
     public static void main(String[] args) throws ConfigurationException, InterruptedException {
         LOGGER.info("Logging hello world.");
-        LOGGER.info("Configuration xml color: {}", Configuration.COLOR.toString());
-        Configuration.COLOR.setValue("red");
-        LOGGER.info("Configuration xml color: {}", Configuration.COLOR.toString());
-        ExecutorCallback ec = new ExecutorCallback();
-        GuavaExpriment ge = new GuavaExpriment();
-        ec.executorWithListener();
-        ge.scan();
-        System.out.println("Main Finished");
+        LOGGER.debug("Logging hello world.");
     }
 }

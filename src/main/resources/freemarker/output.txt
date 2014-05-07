@@ -1,4 +1,0 @@
-h4. Last check for [week: not set] Wt, lut 4, 10:54
-John Smith
-1 price: 10.90
-2 price: 9.90
