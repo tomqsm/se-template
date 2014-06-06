@@ -1,6 +1,7 @@
 package com.tomasz.design.framuga;
 
 import javax.jms.ConnectionFactory;
+import javax.servlet.http.HttpServletRequest;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
@@ -58,13 +59,22 @@ public class App {
                         System.out.println(body);
                     }
                 }).to("file:data/outbox");
-                from("netty-http:http://localhost:9999").process(new Processor() {
+                from("jetty:http://localhost:9999").process(new Processor() {
+
+                    @Override
+                    public void process(Exchange exchange) throws Exception {
+                        System.out.println(exchange.getIn());
+                        HttpServletRequest request = exchange.getIn(HttpServletRequest.class);
+                        System.out.println(request.getLocalAddr());
+                    }
+                }).to("http://localhost:8084/lukasfloorspring/?bridgeEndpoint=true");
+                from("jetty:http://localhost:9999/lukasfloorspring/resources/styles/standard.css").process(new Processor() {
 
                     @Override
                     public void process(Exchange exchange) throws Exception {
                         System.out.println(exchange.getOut().getHeaders());
                     }
-                }).to("http://localhost:8084/servlet_tomcat/?bridgeEndpoint=true");
+                }).to("http://localhost:8084/lukasfloorspring/resources/styles/standard.css?bridgeEndpoint=true");
             }
         });
         camelContext.start();

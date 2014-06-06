@@ -35,7 +35,7 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigourous Test
      */
     public void testApp() throws Exception {
         CamelContext cc = new DefaultCamelContext();
