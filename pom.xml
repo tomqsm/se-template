@@ -32,7 +32,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <log.level>trace</log.level>
+                <log.level>info</log.level>
             </properties>
         </profile>
         <profile>
@@ -62,6 +62,22 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jms</artifactId>
             <version>${camel-version}</version> 
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-bindy</artifactId>
+            <version>${camel-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-netty-http</artifactId>
+            <version>${camel-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-http</artifactId>
+            <version>${camel-version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>

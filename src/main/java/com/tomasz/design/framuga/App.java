@@ -28,10 +28,10 @@ public class App {
         Operatorable operatorable = ac.getBean("myOperator", DivisionOperator.class);
         System.out.println(operatorable.devide(12, 6));
         CamelContext camelContext = new DefaultCamelContext();
-        
+
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("vm://localhost");
         camelContext.addComponent("jms", JmsComponent.jmsComponentAutoAcknowledge(connectionFactory));
-        
+
         camelContext.addRoutes(new RouteBuilder() {
 
             @Override
@@ -40,15 +40,15 @@ public class App {
                         .choice().when(header("CamelFileName").endsWith(".xml"))
                         .process(new Processor() {
 
-                    @Override
-                    public void process(Exchange exchange) throws Exception {
-                        Message message = exchange.getIn();
-                        String body = message.getBody(String.class);
-                        body = body + " enriched " + message.getHeader("CamelFileName", String.class);
-                        message.setBody(body, String.class);
-                        exchange.setIn(message);
-                    }
-                }).convertBodyTo(String.class)
+                            @Override
+                            public void process(Exchange exchange) throws Exception {
+                                Message message = exchange.getIn();
+                                String body = message.getBody(String.class);
+                                body = body + " enriched " + message.getHeader("CamelFileName", String.class);
+                                message.setBody(body, String.class);
+                                exchange.setIn(message);
+                            }
+                        }).convertBodyTo(String.class)
                         .to("jms:orders");
                 from("jms:orders").process(new Processor() {
                     @Override
@@ -58,10 +58,19 @@ public class App {
                         System.out.println(body);
                     }
                 }).to("file:data/outbox");
+                from("netty-http:http://localhost:9999").process(new Processor() {
+
+                    @Override
+                    public void process(Exchange exchange) throws Exception {
+                        System.out.println(exchange.getOut().getHeaders());
+                    }
+                }).to("http://localhost:8084/servlet_tomcat/?bridgeEndpoint=true");
             }
         });
         camelContext.start();
-        Thread.sleep(10000);
-        camelContext.stop();
+//        Thread.sleep(50000);
+//        camelContext.stop();
     }
+
+
 }

@@ -10,26 +10,26 @@ import org.junit.Rule;
 import org.junit.rules.ExpectedException;
 
 public class DivisionOperatorTest {
-    
+
     public DivisionOperatorTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
-    
+
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
