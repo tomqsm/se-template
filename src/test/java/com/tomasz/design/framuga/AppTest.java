@@ -1,7 +1,6 @@
 package com.tomasz.design.framuga;
 
 import com.tomasz.design.framuga.util.PurchaseOrder;
-import java.math.BigDecimal;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -11,6 +10,8 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.model.dataformat.BindyType;
+
+import java.math.BigDecimal;
 
 /**
  * Unit test for simple App.
@@ -43,12 +44,12 @@ public class AppTest
 
             @Override
             public void configure() throws Exception {
-                from("direct:toCsv").marshal().bindy(BindyType.Csv, "com.tomasz.design.framuga.util").to("mock:result");
+                from("direct:toCsv").marshal().bindy(BindyType.Csv, com.tomasz.design.framuga.util.PurchaseOrder.class).to("mock:result");
             }
         });
         cc.start();
         MockEndpoint mock = cc.getEndpoint("mock:result", MockEndpoint.class);
-        mock.expectedBodiesReceived("1|49,95|Camel in Action\n");
+        mock.expectedBodiesReceived("1|49.95|Camel in Action\n");
         PurchaseOrder order = new PurchaseOrder();
         order.setAmount(1);
         order.setPrice(new BigDecimal("49.95"));
