@@ -1,4 +1,4 @@
-h4. Last check for [week: not set] Wt, lut 4, 10:54
+h4. Last check for [week: not set] Fri, Jan 20, 21:59
 {chart:type=line|title=Blockers/Criticals|xLabel=Week|yLabel=Count|width=400|colors=#FF4500, #0000CD|rangeAxisLowerBound=0|rangeAxisUpperBound=17|dataOrientation=vertical}
 ||week||blockers||
 | 24 | 0 |
