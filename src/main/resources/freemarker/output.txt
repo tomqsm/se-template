@@ -1,4 +1,4 @@
-h4. Last check for [week: not set] Sat, Jan 21, 15:06
+h4. Last check for [week: not set] Sat, Jan 21, 15:27
 John Smith
 1 price: 10.90
 2 price: 9.90
