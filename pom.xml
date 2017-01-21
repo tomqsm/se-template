@@ -165,10 +165,10 @@
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>src/main/java/</outputDirectory>
-                            <clearOutputDir>false</clearOutputDir>
+                            <!--<outputDirectory>src/main/java/com/tomasz/design/framuga/jaxb/generated</outputDirectory>-->
+                            <clearOutputDir>true</clearOutputDir>
                             <schemaDirectory>src/main/resources/jaxb/schemas</schemaDirectory>
-                            <schemaFiles>shiporderSplit.xsd</schemaFiles>
+                            <schemaFiles>shiporder.xsd</schemaFiles>
                             <packageName>com.tomasz.design.framuga.jaxb.generated</packageName> <!-- The name of your generated source package -->
                             <staleFile>${project.build.directory}/jaxb2/schema1XjcStaleFlag</staleFile>
                         </configuration>

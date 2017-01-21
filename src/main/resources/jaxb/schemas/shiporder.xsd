@@ -14,6 +14,7 @@
                             <xs:element name="address" type="xs:string"/>
                             <xs:element name="city" type="xs:string"/>
                             <xs:element name="country" type="xs:string"/>
+                            <xs:element name="makumbaa" type="xs:token"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

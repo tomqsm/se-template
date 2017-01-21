@@ -1,16 +1,17 @@
 package com.tomasz.design.framuga.jaxb;
 
 import com.tomasz.design.framuga.jaxb.generated.Shiporder;
-import java.io.File;
-import java.io.IOException;
-import javax.xml.bind.JAXBException;
 import org.apache.commons.io.FileUtils;
-import static org.fest.assertions.Assertions.assertThat;
 import org.junit.After;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
+
+import javax.xml.bind.JAXBException;
+import java.io.File;
+import java.io.IOException;
+
+import static org.fest.assertions.Assertions.assertThat;
+import static org.junit.Assert.*;
 
 //import static org.fest.assertions.api.Assertions.assertThat; // main one
 //import static org.fest.assertions.api.Assertions.atIndex; // for List assertion
@@ -41,9 +42,15 @@ public class XmlUtilsTest {
 
     @Test
     public void canValidateAgainstSchema() throws Exception {
-        final boolean valid = XmlUtils.validateAgainstXSD(
-                FileUtils.openInputStream(SHIPORDER_XML),
-                FileUtils.openInputStream(SHIPORDER_SCHEMA));
+        boolean valid = false;
+        try{
+            valid = XmlUtils.validateAgainstXSD(
+                    FileUtils.openInputStream(SHIPORDER_XML),
+                    FileUtils.openInputStream(SHIPORDER_SCHEMA));
+        } catch (Exception e){
+            fail();
+        }
+
         assertEquals(true, valid);
     }
 
